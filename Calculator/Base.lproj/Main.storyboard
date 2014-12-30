@@ -17,17 +17,24 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Da5-5y-OLh">
-                                <rect key="frame" x="16" y="28" width="179" height="266"/>
+                                <rect key="frame" x="16" y="28" width="176" height="299"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIK-Zm-Rgx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-1234567890" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIK-Zm-Rgx">
                                         <rect key="frame" x="16" y="17" width="147" height="28"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dY-kS-uVE">
+                                        <rect key="frame" x="136" y="53" width="25" height="25"/>
+                                        <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbu-G1-Vrd" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="17" y="53" width="30" height="30"/>
+                                        <rect key="frame" x="16" y="86" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="1">
@@ -39,7 +46,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJT-qO-dkZ" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="57" y="53" width="30" height="30"/>
+                                        <rect key="frame" x="56" y="86" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="2">
@@ -51,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpn-vs-sAg" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="95" y="53" width="30" height="30"/>
+                                        <rect key="frame" x="94" y="86" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="3">
@@ -63,7 +70,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nA4-ku-fIG" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="17" y="94" width="30" height="30"/>
+                                        <rect key="frame" x="16" y="127" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="4">
@@ -75,7 +82,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhQ-NT-DPK" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="56" y="94" width="30" height="30"/>
+                                        <rect key="frame" x="55" y="127" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="5">
@@ -87,7 +94,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5Y-ye-pxT" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="94" y="94" width="30" height="30"/>
+                                        <rect key="frame" x="93" y="127" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="6">
@@ -99,7 +106,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpI-I2-Fw8" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="17" y="137" width="30" height="30"/>
+                                        <rect key="frame" x="16" y="170" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="7">
@@ -111,7 +118,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unJ-fH-zdC" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="55" y="137" width="30" height="30"/>
+                                        <rect key="frame" x="54" y="170" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="8">
@@ -123,7 +130,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77B-NF-8IZ" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="94" y="137" width="30" height="30"/>
+                                        <rect key="frame" x="93" y="170" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="9">
@@ -135,7 +142,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAW-0I-KS1" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="17" y="177" width="30" height="30"/>
+                                        <rect key="frame" x="16" y="210" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="0">
@@ -147,7 +154,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK1-6d-Ker" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="55" y="178" width="69" height="30"/>
+                                        <rect key="frame" x="54" y="211" width="69" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="00">
@@ -159,7 +166,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vt8-Cf-tH8" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="134" y="137" width="30" height="30"/>
+                                        <rect key="frame" x="133" y="170" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.92344599179999998" green="0.67348855848932487" blue="0.25674690348152801" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="＋">
@@ -171,7 +178,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWn-N1-cFK" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="134" y="177" width="30" height="30"/>
+                                        <rect key="frame" x="133" y="210" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.92344599179999998" green="0.67348855848932487" blue="0.25674690348152801" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="ー">
@@ -183,7 +190,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAZ-IF-ldo" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="93" y="216" width="70" height="30"/>
+                                        <rect key="frame" x="92" y="249" width="70" height="30"/>
                                         <color key="backgroundColor" red="0.92344599179999998" green="0.67348855848932487" blue="0.25674690348152801" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="＝">
@@ -195,7 +202,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sT2-DG-Cih" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="134" y="53" width="30" height="30"/>
+                                        <rect key="frame" x="133" y="86" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.92344599179999998" green="0.67348855848932487" blue="0.25674690348152801" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="ｘ">
@@ -207,7 +214,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJT-oj-s9u" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="134" y="94" width="30" height="30"/>
+                                        <rect key="frame" x="133" y="127" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.92344599179999998" green="0.67348855848932487" blue="0.25674690348152801" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="÷">
@@ -219,7 +226,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRL-Bv-hGs" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="17" y="216" width="69" height="30"/>
+                                        <rect key="frame" x="16" y="249" width="69" height="30"/>
                                         <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Clear">
@@ -230,12 +237,28 @@
                                             <action selector="btnClear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yuv-tk-580"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U54-sS-q0o" colorLabel="IBBuiltInLabel-Red">
+                                        <rect key="frame" x="56" y="53" width="30" height="25"/>
+                                        <color key="backgroundColor" red="0.76779477890000003" green="1" blue="0.64287149570000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="-/+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnOperate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gNt-UM-p5m"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58418166035353536" green="0.58418166035353536" blue="0.58418166035353536" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="lblOpe" destination="3dY-kS-uVE" id="khh-0f-Exm"/>
+                        <outlet property="lblResult" destination="TIK-Zm-Rgx" id="9Eh-15-jTt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
