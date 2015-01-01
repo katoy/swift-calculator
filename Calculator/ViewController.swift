@@ -7,6 +7,7 @@
 //
 // See https://www.youtube.com/watch?v=j35eYoxieUw
 //     https://www.youtube.com/watch?v=DGt1yBxBw9k
+//     http://ja.stackoverflow.com/questions/2854/
 //
 
 import UIKit
@@ -18,7 +19,6 @@ class ViewController: UIViewController {
     var result:         Int! = nil
     var currentNumStr:  String = ""
     var currentOpe:     String! = nil
-    var calcError:      String! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,32 +31,28 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func setLabelResult(v: Int) {
-        if (calcError != nil) {
-            lblResult.text = "\(calcError)"
-            println("result = \(calcError)")
-            calcError = nil
+    func setLabelResult(info: (val: Int, error: String?)) {
+        var text: String = "\(info.val)"
+        if (info.error != nil) {
             calcClear()
-        } else {
-            lblResult.text = "\(v)"
-            println("result = \(v)")
+            text = info.error!
         }
+        lblResult.text = text
     }
 
     func setLabelOpe() {
-        if currentOpe == nil {
-            lblOpe.text = ""
-        } else {
-            lblOpe.text = "\(currentOpe)"
+        var text = ""
+        if currentOpe != nil {
+            text = "\(currentOpe)"
         }
-        println("ope = \(currentOpe)")
+        lblOpe.text = text
     }
 
     func calcInit() {
         calcClear()
-        setLabelResult(0)
+        setLabelResult((0, nil))
     }
-    
+
     func calcClear() {
         result = nil
         currentNumStr = ""
@@ -64,36 +60,58 @@ class ViewController: UIViewController {
         setLabelOpe()
     }
 
-    func calc(num1: Int, ope: String, num2: Int) -> Int {
-        var ans = 0
-        calcError = nil
-        switch ope {
-        case "＝":
-            ans = num1
-        case "＋":
-            ans = num1 + num2
-        case "ー":
-            ans = num1 - num2
-        case "ｘ":
-            ans = num1 * num2
-        case "÷":
-            if num2 == 0 {
-                calcError = "0 割り発生"
-            } else {
-                ans = num1 / num2
-            }
-        default:
-            calcError = "エラー"
-        }
-        return ans
+    func calc(num1: Int, ope: String, num2: Int) -> (Int, String?) {
+        
+        let calcFuncs:[String: (Int, Int)->(Int, String?)] = [
+            "＝": calc_eq,
+            "＋": calc_add,
+            "ー": calc_sub,
+            "ｘ": calc_mul,
+            "÷": calc_div,
+            "％": calc_mod,
+            "-/+": calc_minus
+        ]
+        return calcFuncs[ope]!(num1, num2)
     }
-    
+
+    func calc_eq(num1: Int, num2: Int) ->(Int, String?) {
+        return(num2, nil)
+    }
+    func calc_add(num1: Int, num2: Int) ->(Int, String?) {
+        return(num1 + num2, nil)
+    }
+    func calc_sub(num1: Int, num2: Int) ->(Int, String?) {
+        return(num1 - num2, nil)
+    }
+    func calc_mul(num1: Int, num2: Int) ->(Int, String?) {
+        return(num1 * num2, nil)
+    }
+    func calc_div(num1: Int, num2: Int) ->(Int, String?) {
+        if num2 == 0 {
+            return(0, "Divie by 0")
+        } else {
+            return(num1 / num2, nil)
+        }
+    }
+    func calc_mod(num1: Int, num2: Int) ->(Int, String?) {
+        if num2 == 0 {
+            return(0, "Divie by 0")
+        } else {
+            return(num1 % num2, nil)
+        }
+    }
+    func calc_minus(num1: Int, num2: Int) ->(Int, String?) {
+        return(num2 * (-1), nil)
+    }
+
     @IBAction func btnNumber(sender: UIButton) {
         // println(sender.titleLabel?.text!.toInt())
         let v = sender.titleLabel?.text!
         if v == "00" {
             if currentNumStr != "" {
                 currentNumStr = currentNumStr + v!
+            } else {
+                currentNumStr = "0"
             }
         } else {
             currentNumStr = currentNumStr + v!
@@ -102,26 +120,28 @@ class ViewController: UIViewController {
         if currentNumStr != "" {
             x = currentNumStr.toInt()!
         }
-        setLabelResult(x)
+        setLabelResult((x, nil))
     }
 
     @IBAction func btnOperate(sender: UIButton) {
         // println(sender.titleLabel?.text!)
         var v = sender.titleLabel?.text
-        var error = ""
+        var rets: (val: Int, error: String?) = (0, nil)
 
         if v == "-/+" {
-            var neg = 0
             if currentNumStr != "" {
-                neg = calc(0, ope: "ー", num2: currentNumStr.toInt()!)
+                rets = calc(0, ope: "ー", num2: currentNumStr.toInt()!)
             } else if result != nil {
-                neg = calc(0, ope: "ー", num2: result)
+                rets = calc(0, ope: "ー", num2: result)
             }
-            currentNumStr = "\(neg)"
-            setLabelResult(neg)
+            setLabelResult(rets)
+            currentNumStr = "\(rets.val)"
         } else if result != nil && currentNumStr != "" && currentOpe != nil {
-            result = calc(result, ope: currentOpe, num2: currentNumStr.toInt()!)
-            setLabelResult(result)
+            rets = calc(result, ope: currentOpe, num2: currentNumStr.toInt()!)
+            setLabelResult(rets)
+            if rets.error == nil {
+                result = rets.val
+            }
             currentNumStr = ""
         } else {
             if currentNumStr != "" {
@@ -130,17 +150,16 @@ class ViewController: UIViewController {
             currentNumStr = ""
         }
 
-        if v == "＝"  {
+        if v == "＝" {
             currentOpe = nil
         } else if v != "-/+" {
             currentOpe = v
         }
-    
         setLabelOpe()
     }
 
     @IBAction func btnClear(sender: UIButton) {
-        //println(sender.titleLabel?.text!)
+        // println(sender.titleLabel?.text!)
         calcInit()
     }
 }
